@@ -91,11 +91,13 @@ set_target_properties(example PROPERTIES
 )
 
 #链接库
+qt_policy(SET QTP0001 NEW)
 target_link_libraries(example PRIVATE
     Qt6::Quick
     fluentuiplugin
     FramelessHelper::Core
     FramelessHelper::Quick
+    RESOURCE_PREFIX /
 )
 
 #安装
